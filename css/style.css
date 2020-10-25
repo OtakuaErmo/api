@@ -1,14 +1,14 @@
 body{
-    background-image: url('../img/Interior_of_St_Andrew\'s_Catholic_Church_in_Roanoke\,_Virginia.jpg');
-    background-size: cover;
+    /*background-image: url('../img/Interior_of_St_Andrew\'s_Catholic_Church_in_Roanoke\,_Virginia.jpg');
+    background-size: cover;*/
 }
 @media (max-width: 480px) {
     body {  
-        background-image: url('../img/Interior_of_St_Andrew\'s_Catholic_Church_in_Roanoke\,_Virginia_mobile.jpg');
+        /*background-image: url('../img/Interior_of_St_Andrew\'s_Catholic_Church_in_Roanoke\,_Virginia_mobile.jpg');
         background-repeat: no-repeat;
         object-fit: cover;
         object-position: center;
-        background-size: 100%;
+        background-size: 100%;*/
     }
 }
 #main-container{
@@ -18,8 +18,8 @@ body{
     margin-bottom: 10%;
 }
 #card-body{
-    background-image: url('../img/bg-cruz.png');
-    background-size: contain;
+    /*background-image: url('../img/bg-cruz.png');
+    background-size: contain;*/
 }
 .yes-tod-tom{
     font-family: Impact;
