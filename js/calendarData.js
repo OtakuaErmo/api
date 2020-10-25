@@ -1,7 +1,6 @@
 function getDate() {
     celData = null;
-    var url_to_fetch = localStorage.getItem("date");
-    fetch(url_to_fetch).then(function(response){
+    fetch(localStorage.getItem("date")).then(function(response){
         response.json().then(function(data){
             celData = data.celebrations
             var htmlComp = "";
