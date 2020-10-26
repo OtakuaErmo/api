@@ -24,3 +24,18 @@ body{
 .yes-tod-tom{
     font-family: Impact;
 }
+/*definindo as coloracoes de cada dia*/
+ #day-white{
+    color: white;
+}#day-red{
+    color: red;
+}#day-green{
+    color: darkgreen;
+}#day-purple{
+    color: purple;
+}#day-black{
+    color: black;
+}#day-pink{
+    color: pink;
+}
+/*!definindo as coloracoes de cada dia*/
