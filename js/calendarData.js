@@ -7,25 +7,21 @@ function getDate() {
         response.json().then(function(data){
             celData = data.celebrations
             var htmlComp = "";
-            var brData = data.date.split('-').reverse().join('-');
-            console.log(brData);
             celData.forEach(element => {
+                //formatando dados
+                var formatDate = data.date.split('-').reverse().join('/');
+                var formatWeekday = data.weekday.substring(0,1).toUpperCase().concat(data.weekday.substring(1));
+                var formatTitle = element.title.toUpperCase().bold();
+                var formatSeason = data.season.substring(0,1).toUpperCase().concat(data.season.substring(1));
+                //!formatando dados
                 var htmlPadrao = `
                 <div class="card bg-light mb-3 text-center">
-                    <div class="card-header">${element.title}</div>
+                    <div class="card-header">${formatWeekday}, ${formatDate}</div>
                         <div class="card-body">
-                            <h5 class="card-title">${element.title}</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                    <div class="card text-center" id="cards" >
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title">${element.title}</h5>
-                            <h6 class="card-subtitle mb-2 text-white">${element.colour}</h6>
-                            <p class="card-text">${brData}</p>
-                            <a class="card-link text-white">${element.rank}</a>
-                            <a class="card-link text-white">${data.season}</a>
+                            <h5 class="card-title">${formatTitle}</h5>
+                            <p class="card-text mb-0">Season and season week: ${formatSeason}, ${data.season_week}</p>
+                            <p class="card-text mb-0">Colour: ${element.colour}</p>
+                            <p class="card-text mb-0">Rank: ${element.rank}</p>
                         </div>
                     </div>
                 `;
@@ -43,16 +39,4 @@ function selectDate(date){
     sessionStorage.setItem("link", "http://calapi.inadiutorium.cz/api/v0/la/calendars/default/"+date);
 }
 
-function formatDate(data)
-{
-    console.log(data)
-    //return str.split('-').reverse().join('-');
-}
-
 getDate();
-/*
-window.onbeforeunload = function() {
-    sessionStorage.removeItem(data);
-    return 'teste';
-  };
-  */
