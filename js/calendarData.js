@@ -47,7 +47,7 @@ function getDate() {
                 htmlComp += htmlPadrao;
                 document.getElementById("datas").innerHTML = htmlComp;
             });
-        })  
+        })
     }).catch(function(err){
         console.error(err);
     })
@@ -56,6 +56,7 @@ function getDate() {
 function selectDate(date){
     sessionStorage.setItem("date", date);
     sessionStorage.setItem("link", "http://calapi.inadiutorium.cz/api/v0/en/calendars/default/"+date);
+    //sessionStorage.setItem("active", true);
 }
 
 getDate();
